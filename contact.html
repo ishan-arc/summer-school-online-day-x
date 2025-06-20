@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Me</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="portfolio.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="Please enter letters only" />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="^\+?[0-9\s\-]{7,15}$" title="Please enter a valid phone number" />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Contact Method</legend>
+                <label><input type="checkbox" name="contact_method" value="email" /> Email</label>
+                <label><input type="checkbox" name="contact_method" value="phone" /> Phone</label>
+                <label><input type="checkbox" name="contact_method" value="text" /> Text</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Inquiry Type</legend>
+                <label><input type="radio" name="inquiry_type" value="general" required /> General</label>
+                <label><input type="radio" name="inquiry_type" value="business" /> Business</label>
+                <label><input type="radio" name="inquiry_type" value="support" /> Support</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+
+                <label for="dropdown">Select an option:</label>
+                <select id="dropdown" name="dropdown" required>
+                    <option value="">--why contacting--</option>
+                    <option value="option1">for job</option>
+                    <option value="option2">for internship</option>
+                    <option value="option3">for contract</option>
+                </select>
+
+                <label for="date">Select a date:</label>
+                <input type="date" id="date" name="date" required />
+
+                <label for="range">Select a range:</label>
+                <input type="range" id="range" name="range" min="0" max="100" value="50" />
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+</body>
+</html>
